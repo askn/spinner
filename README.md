@@ -32,6 +32,24 @@ sp.stop
 
 `chars`: you can choose charset from [CHARSET](src/spinner/charset.cr) `default = CHARSET[:pipe]`
 
+## Examples
+
+```crystal
+require "spinner"
+require "colorize"
+
+chars = CHARSET[:arrow].map do |c|
+  c.colorize(:light_green)
+end
+
+spin = Spin.new(0.2, chars)
+spin.start
+sleep 3
+spin.stop
+```
+
+![Color](/images/color.gif)
+
 ## Contributing
 
 1. Fork it ( https://github.com/askn/spinner/fork )
