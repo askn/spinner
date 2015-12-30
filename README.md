@@ -30,7 +30,7 @@ sp.stop
 
 `delay`: `default = 0.1`
 
-`chars`: you can choose charset from [CHARSET](src/spinner/charset.cr) `default = CHARSET[:pipe]`
+`chars`: you can choose charset from [CHARSET](src/spinner/charset.cr) `default = Spinner::Charset[:pipe]`
 
 ## Examples
 
@@ -38,7 +38,7 @@ sp.stop
 require "spinner"
 require "colorize"
 
-chars = CHARSET[:arrow].map do |c|
+chars = Spinner::Charset[:arrow].map do |c|
   c.colorize(:light_green)
 end
 

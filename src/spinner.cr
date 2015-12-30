@@ -6,7 +6,7 @@ class Spin
   CL    = STDOUT.tty? ? "\u001b[0G" : "\u000d \u000d"
   CLEAR = STDOUT.tty? ? "\u001b[2K" : "\u000d"
 
-  def initialize(@delay = 0.1, @chars = CHARSET[:pipe])
+  def initialize(@delay = 0.1, @chars = Spinner::Charset[:pipe])
     @state = true
   end
 

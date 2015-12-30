@@ -1,7 +1,7 @@
 require "../src/spinner"
 require "colorize"
 
-chars = CHARSET[:arrow].map do |c|
+chars = Spinner::Charset[:arrow].map do |c|
   c.colorize(:light_green)
 end
 
