@@ -1,9 +1,10 @@
-# spinner
+# Spinner
 
-TODO: Write a description here
+Terminal Spinner for Crystal Programming Language
+
+![All](/images/all.gif)
 
 ## Installation
-
 
 Add this to your application's `shard.yml`:
 
@@ -13,20 +14,23 @@ dependencies:
     github: askn/spinner
 ```
 
-
 ## Usage
 
 
 ```crystal
 require "spinner"
+
+sp = Spin.new
+sp.start
+sleep 3
+sp.stop
 ```
 
+## Options
 
-TODO: Write usage instructions here
+`delay`: `default = 0.1`
 
-## Development
-
-TODO: Write development instructions here
+`chars`: you can choose charset from [CHARSET](src/spinner/charset.cr) `default = CHARSET[:pipe]`
 
 ## Contributing
 
