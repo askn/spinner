@@ -1,7 +1,7 @@
 require "./spinner/*"
 
 class Spin
-  property delay, chars
+  property delay, chars : Array(String)
 
   CL    = STDOUT.tty? ? "\u001b[0G" : "\u000d \u000d"
   CLEAR = STDOUT.tty? ? "\u001b[2K" : "\u000d"
