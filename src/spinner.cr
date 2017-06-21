@@ -1,13 +1,15 @@
 require "./spinner/*"
 
 class Spin
-  property delay, chars : Array(String)
+  property delay
+  property chars : Array(String)
 
   CL    = STDOUT.tty? ? "\u001b[0G" : "\u000d \u000d"
   CLEAR = STDOUT.tty? ? "\u001b[2K" : "\u000d"
 
-  def initialize(@delay = 0.1, @chars = Spinner::Charset[:pipe])
+  def initialize(@delay = 0.1, chars = Spinner::Charset[:pipe])
     @state = true
+    @chars = chars.to_a
   end
 
   def stop
