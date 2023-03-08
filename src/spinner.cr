@@ -2,7 +2,7 @@ require "./spinner/*"
 
 class Spin
   property delay
-  property chars : Array(String)
+  property chars : Array(String) | Array(Colorize::Object(String))
 
   CL    = STDOUT.tty? ? "\u001b[0G" : "\u000d \u000d"
   CLEAR = STDOUT.tty? ? "\u001b[2K" : "\u000d"
